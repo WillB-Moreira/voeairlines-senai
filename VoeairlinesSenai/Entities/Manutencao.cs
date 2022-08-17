@@ -5,9 +5,9 @@ using VoeAirlinesSenai.Entities.Enums;
 
 
 public class Manutencao{
-    public Manutencao(DateTime datahora, string observacoes, TipoManutencao tipo, int aeronaveId)
+    public Manutencao (DateTime dataHora, TipoManutencao tipo, int aeronaveId, string? observacoes = null)
     {
-        Datahora = datahora;
+        Datahora = dataHora;
         Observacoes = observacoes;
         Tipo = tipo;
         AeronaveId = aeronaveId;
@@ -17,12 +17,13 @@ public class Manutencao{
 
     public DateTime Datahora {get; set;}
 
-    public string Observacoes {get; set;}
+    public string? Observacoes {get; set;}
 
     public TipoManutencao Tipo { get; set; }
 
     public int AeronaveId { get; set; }
 
-    public Aeronave Aeronave { get; set; }
+    public Aeronave Aeronave { get; set; } = null!;
+    
 
 }
