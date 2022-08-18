@@ -2,7 +2,8 @@ namespace VoeAirlinesSenai.Entities;
 
     public class Voo
     {
-    public Voo(string origem, string destino, string dataHoraPartida, string dataHoraChegada;
+    public Voo(string origem, string destino, DateTime dataHoraPartida, DateTime dataHoraChegada, int aeronaveId, int pilotoId)
+    
     {
         Origem = origem;
         Destino = destino;
@@ -11,7 +12,7 @@ namespace VoeAirlinesSenai.Entities;
         AeronaveId = aeronaveId;
         PilotoId = pilotoId;
     }
-    {
+    
         public int Id { get; set; }
         public string Origem {get; set;}
         public string Destino {get; set;}
@@ -21,6 +22,7 @@ namespace VoeAirlinesSenai.Entities;
         public int PilotoId{get; set;}
         public Aeronave Aeronave {get; set;} = null!;
         public Piloto Piloto {get; set;} = null!;
-        //public Cancelamento? Cancelamento{get; set;}
+        public Cancelamento Cancelamento{get; set;} = null!;
+    
     }
-    }
+    
